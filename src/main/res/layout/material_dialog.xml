@@ -81,23 +81,26 @@
         android:id="@+id/buttonDefaultFrame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/button_frame_margin"
-        android:paddingRight="@dimen/button_frame_margin">
+        android:paddingLeft="@dimen/dialog_frame_margin"
+        android:paddingRight="@dimen/dialog_frame_margin">
 
         <com.afollestad.materialdialogs.MaterialButton
             android:id="@+id/buttonDefaultNeutral"
             style="@style/ActionButton"
-            android:layout_alignParentLeft="true" />
+            android:layout_alignParentLeft="true"
+            android:gravity="left|center_vertical" />
 
         <com.afollestad.materialdialogs.MaterialButton
             android:id="@+id/buttonDefaultNegative"
             style="@style/ActionButton"
-            android:layout_toLeftOf="@+id/buttonDefaultPositive" />
+            android:layout_toLeftOf="@+id/buttonDefaultPositive"
+            android:gravity="right|center_vertical" />
 
         <com.afollestad.materialdialogs.MaterialButton
             android:id="@+id/buttonDefaultPositive"
             style="@style/ActionButton"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:gravity="right|center_vertical" />
 
     </RelativeLayout>
 
@@ -106,8 +109,8 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/button_frame_margin"
-        android:paddingRight="@dimen/button_frame_margin"
+        android:paddingLeft="@dimen/dialog_frame_margin"
+        android:paddingRight="@dimen/dialog_frame_margin"
         android:gravity="right">
 
         <com.afollestad.materialdialogs.MaterialButton

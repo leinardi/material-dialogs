@@ -186,7 +186,7 @@ public class MaterialDialog extends DialogBase implements View.OnClickListener {
             return;
         }
         Paint paint = positiveButton.getPaint();
-        float px = mContext.getResources().getDimension(R.dimen.button_regular_width);
+        float px = mContext.getResources().getDimension(R.dimen.button_min_width);
         isStacked = paint.measureText(positiveButton.getText().toString()) > px;
         if (this.neutralText != null)
             isStacked = isStacked || paint.measureText(neutralButton.getText().toString()) > px;
