@@ -37,6 +37,10 @@ public class DialogBase extends AlertDialog {
         throw new RuntimeException("This method is not supported by the MaterialDialog.");
     }
 
+    protected void setViewInternal(View view) {
+        super.setView(view);
+    }
+
     /**
      * @deprecated Not supported by the Material dialog.
      */

@@ -116,7 +116,7 @@ public class MaterialDialog extends DialogBase implements View.OnClickListener {
         invalidateList();
         invalidateActions();
         checkIfStackingNeeded();
-        setView(view);
+        setViewInternal(view);
     }
 
     /**
