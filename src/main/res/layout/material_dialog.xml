@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/dialog_frame_margin"
-        android:paddingBottom="@dimen/dialog_frame_margin"
+        android:paddingBottom="@dimen/button_frame_margin"
         android:paddingLeft="@dimen/dialog_frame_margin"
         android:paddingRight="@dimen/dialog_frame_margin">
 
