@@ -17,6 +17,7 @@ import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -184,13 +185,18 @@ public class MaterialDialog extends DialogBase implements View.OnClickListener {
             // Stacking isn't necessary if you only have one button
             return;
         }
+        RelativeLayout buttonDefaultFrame = (RelativeLayout) view.findViewById(R.id.buttonDefaultFrame);
+        int widthMeasureSpec = View.MeasureSpec.makeMeasureSpec(ViewGroup.LayoutParams.MATCH_PARENT, View.MeasureSpec.EXACTLY);
+        int heightMeasureSpec = View.MeasureSpec.makeMeasureSpec(ViewGroup.LayoutParams.WRAP_CONTENT, View.MeasureSpec.EXACTLY);
+        buttonDefaultFrame.measure(widthMeasureSpec, heightMeasureSpec);
         Paint paint = positiveButton.getPaint();
-        float px = mContext.getResources().getDimension(R.dimen.button_regular_width);
-        isStacked = paint.measureText(positiveButton.getText().toString()) > px;
+        float dialogFrameMargin = mContext.getResources().getDimension(R.dimen.button_frame_margin);
+        float totalWidth = paint.measureText(positiveButton.getText().toString());
         if (this.neutralText != null)
-            isStacked = isStacked || paint.measureText(neutralButton.getText().toString()) > px;
+            totalWidth += paint.measureText(neutralButton.getText().toString());
         if (this.negativeText != null)
-            isStacked = isStacked || paint.measureText(negativeButton.getText().toString()) > px;
+            totalWidth += paint.measureText(negativeButton.getText().toString());
+        isStacked = totalWidth > (buttonDefaultFrame.getMeasuredWidth() - (dialogFrameMargin * 2));
         invalidateActions();
     }
 

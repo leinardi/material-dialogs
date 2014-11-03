@@ -15,6 +15,7 @@
     <dimen name="button_regular_width">88dp</dimen>
     <dimen name="button_min_width">56dp</dimen>
     <dimen name="button_margin">6dp</dimen>
+    <dimen name="button_frame_margin">16dp</dimen>
     <dimen name="button_padding">8dp</dimen>
 
     <dimen name="title_textsize">20sp</dimen>

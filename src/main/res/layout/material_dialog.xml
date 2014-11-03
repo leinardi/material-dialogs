@@ -14,6 +14,7 @@
         android:paddingLeft="@dimen/dialog_frame_margin_side"
         android:paddingRight="@dimen/dialog_frame_margin_side">
 
+
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
@@ -85,17 +86,20 @@
         <com.afollestad.materialdialogs.MaterialButton
             android:id="@+id/buttonDefaultNeutral"
             style="@style/ActionButton"
-            android:layout_alignParentLeft="true" />
+            android:layout_alignParentLeft="true"
+            android:gravity="left|center_vertical" />
 
         <com.afollestad.materialdialogs.MaterialButton
             android:id="@+id/buttonDefaultNegative"
             style="@style/ActionButton"
-            android:layout_toLeftOf="@+id/buttonDefaultPositive" />
+            android:layout_toLeftOf="@+id/buttonDefaultPositive"
+            android:gravity="right|center_vertical" />
 
         <com.afollestad.materialdialogs.MaterialButton
             android:id="@+id/buttonDefaultPositive"
             style="@style/ActionButton"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:gravity="right|center_vertical" />
 
     </RelativeLayout>
 
