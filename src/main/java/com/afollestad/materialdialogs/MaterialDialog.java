@@ -191,7 +191,7 @@ public class MaterialDialog extends DialogBase implements View.OnClickListener {
         int heightMeasureSpec = View.MeasureSpec.makeMeasureSpec(ViewGroup.LayoutParams.WRAP_CONTENT, View.MeasureSpec.EXACTLY);
         buttonDefaultFrame.measure(widthMeasureSpec, heightMeasureSpec);
         Paint paint = positiveButton.getPaint();
-        float dialogFrameMargin = mContext.getResources().getDimension(R.dimen.dialog_frame_margin);
+        float dialogFrameMargin = mContext.getResources().getDimension(R.dimen.button_frame_margin);
         float totalWidth = paint.measureText(positiveButton.getText().toString());
         if (this.neutralText != null)
             totalWidth += paint.measureText(neutralButton.getText().toString());
