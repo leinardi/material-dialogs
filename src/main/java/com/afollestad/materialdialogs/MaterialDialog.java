@@ -86,18 +86,17 @@ public class MaterialDialog extends DialogBase implements View.OnClickListener {
 
         if (customView != null) {
             title = (TextView) view.findViewById(R.id.titleCustomView);
-            buttonHeight = mContext.getResources().getDimension(R.dimen.button_height_customview);
             view.findViewById(R.id.mainFrame).setVisibility(View.GONE);
             view.findViewById(R.id.customViewScroll).setVisibility(View.VISIBLE);
             view.findViewById(R.id.customViewDivider).setVisibility(View.VISIBLE);
             view.findViewById(R.id.customViewDivider).setBackgroundColor(Utils.resolveColor(getContext(), R.attr.divider_color));
             ((LinearLayout) view.findViewById(R.id.customViewFrame)).addView(customView);
         } else {
-            buttonHeight = mContext.getResources().getDimension(R.dimen.button_height);
             view.findViewById(R.id.mainFrame).setVisibility(View.VISIBLE);
             view.findViewById(R.id.customViewScroll).setVisibility(View.GONE);
             view.findViewById(R.id.customViewDivider).setVisibility(View.GONE);
         }
+        buttonHeight = mContext.getResources().getDimension(R.dimen.button_height);
 
         // Title is set after it's determined whether to use first title or custom view title
         title.setText(builder.title);
